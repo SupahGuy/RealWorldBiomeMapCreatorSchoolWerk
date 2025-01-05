@@ -32,7 +32,7 @@ public class SateliteTile : ITile
             for (int x = 0; x < imageTile.Width; x++)
             {
                 Rgba32 pixelColor = imageTile[x, y];
-                Biome biome = BiomeMapper.DetermineBiome(pixelColor);
+                Biome biome = BiomeMapper.DetermineBiome(pixelColor, HeightMapper.GetHeight());
                 int surfaceHeight = HeightMapper.GetHeight(); // @TODO Implementeer dit
                 Console.WriteLine($"Pixel ({x},{y}) is biome {biome} en hoogte is {surfaceHeight}");
                 // @TODO Sla het resultaat ergens in op?
