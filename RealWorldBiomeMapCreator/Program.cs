@@ -30,7 +30,7 @@ public class Program
         // Deze coordinaten zijn een deel van Nederland, het eindresultaat zal het liefste met zoom 9 moeten werken.
         int worldX = 64;
         int worldY = 42;
-        SateliteTile sateliteTile = new SateliteTile(await tileDownloader.DownloadTile(worldX, worldY, 7));
+        SateliteTile sateliteTile = new SateliteTile(await tileDownloader.DownloadTile(worldX, worldY, 9));
         
         // @TODO (Bonus) maak deze analyse multithreaded, zodat het sneller wordt om de hele wereld te laden.
         sateliteTile.AnalyzeTile();

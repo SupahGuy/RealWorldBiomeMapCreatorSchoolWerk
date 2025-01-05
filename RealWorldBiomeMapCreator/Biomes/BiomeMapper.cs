@@ -1,3 +1,4 @@
+using System.ComponentModel.Design;
 using SixLabors.ImageSharp.PixelFormats;
 
 namespace RealWorldBiomeMapCreator.Biomes;
@@ -5,7 +6,7 @@ namespace RealWorldBiomeMapCreator.Biomes;
 public static class BiomeMapper
 {
     // @TODO implementeer dit
-    public static Biome DetermineBiome(Rgba32 color)
+    public static Biome DetermineBiome(Rgba32 color, int height)
     {
         // Voorbeeldlogica om kleuren aan biomes te koppelen
         if (color.R > 200 && color.G > 200 && color.B > 200)
@@ -24,5 +25,10 @@ public static class BiomeMapper
         {
             return Biome.PLAINS;
         }
-    }
+
+        if (color.R > 200 && color.G < 50 && color.B < 50)
+        {
+            
+        }
+     }
 }
